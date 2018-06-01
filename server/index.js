@@ -11,6 +11,7 @@ const app = express();
 app.use(bodyParser.json())
 
 app.get('/api/houses', ctrl.getAll)
+app.post('/api/houses', ctrl.postHouse)
 
 massive(CONNECTION_STRING).then( db => {
     app.set('db', db )

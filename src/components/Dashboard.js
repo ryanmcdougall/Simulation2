@@ -23,7 +23,7 @@ class Dashboard extends Component{
     render(){
         let housesMapped = this.state.houses.map((e,i) => {
             return(
-                <House key={i}/>
+                <House key={i} listOfHouses={e}/>
             )
         })
         return(
